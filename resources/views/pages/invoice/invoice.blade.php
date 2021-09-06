@@ -79,7 +79,7 @@
     <script src="{{ asset('js/app.js') }}" defer></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js"></script>
 
-    <scriptd>
+    <script>
         $('#stempel').on('change', function() {
             axios.post('{{ route('invoice.stempel') }}', {
                     id: $(this).val()
@@ -120,25 +120,6 @@
                     .then(function(response) {
                         console.log(response)
                         $('#data').append(
-                        <tr>
-                                        <td>{{ $detail->sn }}</td>
-                                        <td>{{ $detail->imei }}</td>
-                                        <td>{{ $detail->id }}</td>
-                                        <td>{{ $detail->type->name }}</td>
-                                        <td>{{ $detail->warehouse->name }}</td>
-                                        <td>{{ $detail->price }}</td>
-                                        <td>{{ $detail->status->name }}</td>
-                                        <td class="row">
-                                            <div class="col-md-1 ml-3">
-                                                <form action="{{ route('invoice.destroy', $detail->id) }}"
-                                                    method="post">
-                                                    @csrf
-                                                    <button class="btn btn-outline-danger btn-sm"
-                                                        type="submit">Remove</button>
-                                                </form>
-                                            </div>
-                                        </td>
-                                    </tr>
                         )
                     });
             });

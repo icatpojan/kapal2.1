@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>Laravel 5.8 Generate QR Code Tutorial with Example - W3Adda</title>
+    <title>INVOICE OFFICE KAPAL PINTAR</title>
     <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css" />
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
@@ -28,7 +28,7 @@
             </div>
         </div>
     </div>
-    <img src="data:image/png;base64, {!! base64_encode(QrCode::format('png')->size(200)->generate($transfer_date)) !!} ">
+    <img src="data:image/png;base64, {!! base64_encode(QrCode::format('png')->size(200)->generate('https://office.kapalpintar.com/cetak/pdf/' . $id)) !!} ">
 </body>
 <style>
     @page {

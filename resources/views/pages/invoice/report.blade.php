@@ -48,7 +48,7 @@
                                         </button>
                                     </div>
                                     <div class="col-md-1 ml-5">
-                                        <form action="{{ route('report.cetak', $invoice->id) }}" method="POST">
+                                        <form action="{{ route('report.cetak', $invoice->id) }}" method="GET">
                                             @csrf
                                             <button class="btn btn-outline-danger btn-sm" type="submit">Print</button>
                                         </form>

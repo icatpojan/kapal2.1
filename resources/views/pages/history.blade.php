@@ -24,7 +24,7 @@
                             <th>Tanggal</th>
                         </tr>
                     </thead>
-                    <tfoot>
+                    <tbody>
                         @foreach ($History as $history)
                             <tr>
                                 <td>{{ $history->keterangan }}</td>
@@ -32,7 +32,7 @@
                                 <td>{{ $history->tanggal }}</td>
                             </tr>
                         @endforeach
-                    </tfoot>
+                    </tbody>
                     <tbody>
 
                     </tbody>
